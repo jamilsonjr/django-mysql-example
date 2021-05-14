@@ -10,18 +10,18 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
-import os
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path().resolve()
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-sz5ud6s=mjt(b1%yge@xd^2&)x10=tns^fq15iw=z)@5p7b&nx'
+SECRET_KEY = 'django-insecure-h)yq)$zkohh$9&2#5o*i+3p+#_j!mj&qs25e2enc3n-mgt-)ie'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -57,7 +57,7 @@ ROOT_URLCONF = 'djangoCrudExample.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'crudapp/templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -78,13 +78,13 @@ WSGI_APPLICATION = 'djangoCrudExample.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.mysql', 
         'NAME': 'mydb',
         'USER': 'jamilson',
-        'PASSWORD': 'juninho123',
-        'HOST': 'localhost',
-        'PORT': '3306'
-    }
+        'PASSWORD': '***',
+        'HOST': 'localhost',   
+        'PORT': '3306',
+    }    
 }
 
 
